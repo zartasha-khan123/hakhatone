@@ -19,7 +19,6 @@ import { MdOutlinePinInvoke } from "react-icons/md";
 function Productlisting() {
   const [isVisible, setIsVisible] = useState(true);
 
-  if (!isVisible) return null;
 
   const [quantity, setQuantity] = useState(1)
 
@@ -30,6 +29,7 @@ function Productlisting() {
   const decrementQuantity = () => {
     setQuantity(prev => (prev > 1 ? prev - 1 : 1))
   }
+  if (!isVisible) return null;
 
   return (
     <>
