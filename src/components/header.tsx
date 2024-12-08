@@ -69,26 +69,9 @@ function Header() {
   };
   return (
     <>
-      {/* <nav className="bg-white p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo 
-        <div className="text-black text-xl font-bold">
-          <Link href="/">Avion</Link>
-        </div>
-
-        {/* Desktop Menu 
-        <div className="hidden md:flex space-x-8">
-          <Link href="/" className="text-black">About Us</Link>
-          <Link href="/about" className="text-black">Contact</Link>
-          <Link href="/services" className="text-black">Blog</Link>
-          <div className='relative w-8 h-8'> <Search className='absolute right-4 top-1/2  -translate-y-1/2 w-4 h-4 text-gray-500 '/></div>
-         <div className='relative w-8 h-8'><ShoppingCart className='absolute right-4 top-1/2  -translate-y-1/2 w-4 h-4 text-gray-500 '/></div> 
-         <div className='relative w-8 h-8'><CircleUserRound  className='absolute right-4 top-1/2  -translate-y-1/2 w-4 h-4 text-gray-500 ' /></div>
-               
-        </div>  */}
-
+    
         {/* Hamburger Icon for Mobile */}
-        <button className=" md:hidden text-black" onClick={toggleMenu}>
+        <button className=" md:hidden text-black relative left-0" onClick={toggleMenu} >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -123,7 +106,7 @@ function Header() {
           <div className=" hidden md:block absolute left-[1.94%] right-[1.81%] top-[70px] border-t border-black/10" />
 
           {/* Navigation Links */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-[90px] flex gap-11">
+          <div className=" absolute left-1/2 -translate-x-1/2 top-[90px] flex flex-hidden gap-11">
             {[
               { name: "Plant pots", link: "/" },
               { name: "Ceramics", link: "/homev1" },
