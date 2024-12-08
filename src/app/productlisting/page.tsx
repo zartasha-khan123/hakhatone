@@ -10,7 +10,6 @@ import { Minus, Plus } from 'lucide-react'
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Product from "@/components/product";
 import Features from "@/components/features";
 import Newsletter from "@/components/newsletter";
 import { FaSkype } from "react-icons/fa";
