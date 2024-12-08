@@ -9,11 +9,11 @@ function Hero() {
         {/* Left Column */}
         <div className="bg-[#2A254B] p-14 flex flex-col justify-between">
           <div className="space-y-10">
-            <h1 className='text-4xl leading-[140%] text-white max-w-[513px]'>
+            <h1 className='text-4xl leading-[140%] text-white max-w-[513px] mb-[40px]'>
               The furniture brand for the future, with timeless designs
             </h1>
             
-            <button className="inline-flex items-center px-8 py-4 text-white bg-white/15 hover:bg-white/20 transition-colors">
+            <button className="inline-flex items-center px-8 py-4 text-white bg-white/15 hover:bg-white/20 transition-colors ">
               View collection
             </button>
           </div>

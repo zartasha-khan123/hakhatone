@@ -218,7 +218,6 @@ Get in touch          </button>
         </div>
 
 <section className="relative mt-12 max-w-[1440px] mx-auto h-[444px] mb-0">
-  {/* Background Image */}
   <Image
     src="/orange.png"
     alt="Background Image"
@@ -227,7 +226,6 @@ Get in touch          </button>
     className="rounded-lg"
   />
 
-  {/* Content Section */}
   <div className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-6">
     <br/>
     <br/>
@@ -235,7 +233,6 @@ Get in touch          </button>
     <br/>
     <br/>
     <br/>
-    {/* Input and Button */}
     <div className="flex items-center w-3/4 max-w-md mt-6">
       <input
         type="email"
@@ -248,6 +245,7 @@ Get in touch          </button>
     </div>
   </div>
 </section>
+
 
 
       <Footer/>

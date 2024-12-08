@@ -137,7 +137,6 @@ function Productlisting() {
               </ul>
             </div>
           </Card>
-
           <Card className="p-5">
             <h2 className="text-base text-[#2A254B] mb-7">Dimensions</h2>
             <div className="flex gap-14">
@@ -298,3 +297,5 @@ function Productlisting() {
 }
 
 export default Productlisting;
+
+
