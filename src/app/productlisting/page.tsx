@@ -57,27 +57,7 @@ function Productlisting() {
           Avion
         </Link>
 
-        {/* Main Navigation */}
-        {/* <div className="flex gap-11">
-          {[
-            "Plant pots",
-            "Ceramics",
-            "Tables",
-            "Chairs",
-            "Crockery",
-            "Tableware",
-            "Cutlery",
-          ].map((item) => (
-            <Link
-              key={item}
-              href={`/${item.toLowerCase().replace(" ", "-")}`}
-              className="text-[#726E8D] hover:text-[#22202E] transition-colors text-base"
-            >
-              {item}
-            </Link>
-          ))}
-        </div> */}
-
+       
 <div className="absolute left-1/2 -translate-x-1/2 top-[90px] flex gap-11">
             {[
               { name: "Plant pots", link: "/" },
