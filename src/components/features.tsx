@@ -5,7 +5,7 @@ function Features() {
   return (
     <>
        {/* Features Section */}
-      <section className="p-8 mt-[60px]">
+      <section className="p-8 mt-[40px] ">
         <h3 className=" text-[24px] leading-[33.6px] text-xl font-bold mb-[50px] text-center">What makes our brand different</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[

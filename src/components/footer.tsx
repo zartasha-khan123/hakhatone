@@ -2,6 +2,7 @@
 import { Facebook, Instagram, Linkedin, Twitter, PinIcon as Pinterest, WebcamIcon as Skype } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Menu Section */}
           <div className="space-y-4">
-            <h3 className="font-clash-display text-base">Menu</h3>
+            <h3 className="font-clash-display text-base font-semibold">Menu</h3>
             <ul className="space-y-3">
               <li className="text-sm">New arrivals</li>
               <li className="text-sm">Best sellers</li>
@@ -22,7 +23,7 @@ export default function Footer() {
 
           {/* Categories Section */}
           <div className="space-y-4">
-            <h3 className="font-clash-display text-base">Categories</h3>
+            <h3 className="font-clash-display text-base font-semibold">Categories</h3>
             <ul className="space-y-3">
               <li className="text-sm">Crockery</li>
               <li className="text-sm">Furniture</li>
@@ -35,7 +36,7 @@ export default function Footer() {
 
           {/* Our Company Section */}
           <div className="space-y-4">
-            <h3 className="font-clash-display text-base">Our company</h3>
+            <h3 className="font-clash-display text-base font-semibold">Our company</h3>
             <ul className="space-y-3">
               <li className="text-sm">About us</li>
               <li className="text-sm">Vacancies</li>
@@ -67,12 +68,12 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-[#4E4D93] flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm">Copyright 2022 Avion LTD</p>
           <div className="flex gap-6">
-            <Linkedin className="w-6 h-6" />
-            <Facebook className="w-6 h-6" />
-            <Instagram className="w-6 h-6" />
-            <Skype className="w-6 h-6" />
-            <Twitter className="w-6 h-6" />
-            <Pinterest className="w-6 h-6" />
+           <Link href='/'> <Linkedin size={20}  /></Link>
+           <Link href='/'> <Facebook  size={20} /></Link>
+           <Link href='/'>  <Instagram size={20}/></Link>
+            <Link href='/'><Skype size={20} /></Link>
+           <Link href='/' > <Twitter size={20} /></Link>
+            <Link href='/'><Pinterest size={20} /></Link>
           </div>
         </div>
       </div>

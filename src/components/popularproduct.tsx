@@ -93,13 +93,15 @@ import Image from 'next/image';
 
 function Popularproduct() {
   const products = [
+
     { title: 'The Poplar suede sofa', price: '£980', img: '/sofas.png' },
     { title: 'The Dandy chair', price: '£250', img: '/rightmain.png' },
     { title: 'The Dandy chair', price: '£250', img: '/chairlast.png' },
   ];
 
+  
   return (
-    <>
+           <>
       {/* Products Section */}
       <section className="p-6 sm:p-8 bg-gray-100 mt-[80px]">
         <h3 className="text-[28px] sm:text-[32px] leading-[39.36px] font-bold mb-6 sm:mb-[33px] text-center sm:text-left">

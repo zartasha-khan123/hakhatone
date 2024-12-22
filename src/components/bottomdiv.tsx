@@ -9,7 +9,7 @@ function Bottomdiv() {
         <div className="flex flex-col justify-center">
           <h2 className="text-[24px] text-black leading-[33.6px] md:text-5xl font-sans mb-4">
           From a studio in London to a global brand with
-          over 400 outlets
+          over 400 outlets...
           </h2>
           <p className="mb-6 text-gray-800 text-[16px] leading-[21.5px] mt-[25px]">
           When we started Avion, the idea was simple. Make high quality furniture affordable and available 
