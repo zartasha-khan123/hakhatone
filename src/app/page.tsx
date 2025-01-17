@@ -16,13 +16,13 @@ export default function Home() {
     
 
     <Header/> 
-      <Hero/>
+    <Hero/>
     <Features/>
-   <Product/>
-<Popularproduct/>
-<Newsletter/> 
-<Bottomdiv/>
-<Footer/>
+    <Product/>
+    <Popularproduct/>
+    <Newsletter/> 
+    <Bottomdiv/>
+    <Footer/>
   
    </>
   );

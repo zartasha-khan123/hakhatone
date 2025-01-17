@@ -132,6 +132,9 @@
 
 // export default HomeV1;
 
+
+
+//src\app\homev1\page.tsx
 "use client";
 import React, { useState } from "react";
 import { CircleUserRound, Truck, X } from "lucide-react";
@@ -235,7 +238,7 @@ function HomeV1() {
           </div>
         )}
       </nav>
-
+         
      
       <nav className="w-full max-w-[1440px] bg-white mx-auto p-4">
         <div className="flex justify-between items-center">

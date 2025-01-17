@@ -4,14 +4,20 @@ export default {
     type: 'document',
     fields: [
         {
-            title: 'page Section',
+            title: 'Sections',
             name: 'sections',
             type: 'array',
             of:[
                 {type:'hero'},
                 {type:'productsection'},
+                // {type:'popularsections'},
             ]
         },
       
     ],
 }
+
+
+
+
+// const arrays: string[] = 

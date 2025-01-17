@@ -527,6 +527,8 @@ import Link from 'next/link';
 import { ShoppingCart } from 'lucide-react';
 import { CircleUserRound } from 'lucide-react';
 import { useState } from 'react';
+import { IoBagCheckOutline } from "react-icons/io5";
+
 
 function Header() {
 
@@ -544,15 +546,17 @@ function Header() {
       <nav className="w-full max-w-[1440px] bg-white mx-auto p-4">
         <div className="flex justify-between items-center">
           {/* Search */}
-          <Search className="w-4 h-4 text-[#2A254B]" />
-
+          <Link href="/productsv1"><Search className="w-4 h-4 text-[#2A254B]" />
+          </Link>
           {/* Logo */}
           <h1 className="text-2xl font-clash-display text-[#22202E]">Avion</h1>
 
           {/* Icons */}
           <div className="flex gap-4">
-            <ShoppingCart className="w-4 h-4 text-[#2A254B]" />
-            <User className="w-4 h-4 text-[#2A254B]" />
+           <Link href="/cart1"><ShoppingCart className="w-4 h-4 text-[#2A254B]" /></Link> 
+           <Link href="/login"> <User className="w-4 h-4 text-[#2A254B]" /></Link>
+           <Link href="/checkout"> <IoBagCheckOutline className="w-4 h-4 text-[#2A254B]"/></Link>
+
           </div>
         </div>
 

@@ -446,7 +446,7 @@
 // export default Productpage
 
 
-
+//src\app\productpage\page.tsx
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
@@ -486,8 +486,8 @@ function Productpage() {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             <Link href="/" className="text-black">About Us</Link>
-            <Link href="/about" className="text-black">Contact</Link>
-            <Link href="/services" className="text-black">Blog</Link>
+            <Link href="/contactus" className="text-black">Contact</Link>
+            <Link href="/productsv1" className="text-black">Blog</Link>
             <div className="relative w-8 h-8">
               <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
             </div>
