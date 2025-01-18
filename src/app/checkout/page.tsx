@@ -376,7 +376,7 @@ export default function CheckoutForm() {
               })}
 
               <Button className="w-full rounded-full py-6 bg-yellow-800" onClick={handlePayment}>
-                Let's Pay
+                Lets Pay
               </Button>
             </div>
           </div>

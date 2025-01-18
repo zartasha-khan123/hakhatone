@@ -1,4 +1,4 @@
-export default {
+export const Hero= {
     title: 'Hero Section',
     name: 'hero',
     type: 'object',

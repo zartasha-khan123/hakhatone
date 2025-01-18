@@ -1,5 +1,5 @@
 
-export default {
+export const Products =  {
 
     title:'product section',
     name:'productsection',

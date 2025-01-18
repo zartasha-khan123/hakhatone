@@ -1,4 +1,4 @@
-export default {
+export const Popular =  {
     title: "popular products",
     name: " popularsections",
     type: "object",

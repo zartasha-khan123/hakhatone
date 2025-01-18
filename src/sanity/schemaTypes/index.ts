@@ -1,11 +1,11 @@
 import { type SchemaTypeDefinition } from 'sanity'
-import landingpage from './landingpage'
-import hero from './landingpagesections/hero'
-import productsection from './landingpagesections/productsection'
-import popularproducts from './landingpagesections/popularproducts'
+import  { Landing } from './landingpage'
+import  { Hero } from './landingpagesections/hero'
+import  { Products } from './landingpagesections/productsection'
+import { Popular } from './landingpagesections/popularproducts'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-   types: [landingpage,hero,productsection,popularproducts],
+   types: [Landing,Hero,Products,Popular],
 }
 
 
