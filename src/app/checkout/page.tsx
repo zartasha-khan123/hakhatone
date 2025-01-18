@@ -244,7 +244,7 @@ export default function CheckoutForm() {
   const [shipCost, setShipCost] = useState(0);
 
   useEffect(() => {
-    const data = localStorage.getItem("cart");
+    const data = localStorage.getItem("cart1");
     const cart = data ? JSON.parse(data) : [];
     setCartItem(cart);
 
