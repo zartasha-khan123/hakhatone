@@ -245,8 +245,6 @@ export default function ShoppingCart() {
   const [cartItem, setCartItem] = useState<Iproduct[]>([]);
 
 
-
-
   useEffect(()=>{
     const cart = localStorage.getItem("cart1")
     const updatedCart = cart ? JSON.parse(cart) : []

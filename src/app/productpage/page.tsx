@@ -468,7 +468,7 @@ function Productpage() {
           {/* content-1 */}
           <div className="flex justify-between text-center gap-2  ml-[309px]">
             Free delivery on all orders over £50 with code easter checkout 
-            <div className='text-right '> <Link href="/cart" className=" font-semibold hover:underline">
+            <div className='text-right '> <Link href="/cart1" className=" font-semibold hover:underline">
               X
             </Link></div>
           </div>
@@ -509,9 +509,9 @@ function Productpage() {
 
         {/* Mobile Menu */}
          <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-blue-600 p-4`}>
-          <Link href="/about" className="block text-white py-2">About Us</Link>
-          <Link href="/contact" className="block text-white py-2">Contact</Link>
-          <Link href="/services" className="block text-white py-2">Blog</Link>
+          <Link href="/" className="block text-white py-2">About Us</Link>
+          <Link href="/contactus" className="block text-white py-2">Contact</Link>
+          <Link href="/productsv1" className="block text-white py-2">Blog</Link>
         </div>
       </nav>
 
