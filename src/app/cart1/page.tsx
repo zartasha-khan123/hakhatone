@@ -246,7 +246,7 @@ export default function ShoppingCart() {
 
 
   useEffect(()=>{
-    const cart = localStorage.getItem("cart1")
+    const cart = localStorage.getItem("cart")
     const updatedCart = cart ? JSON.parse(cart) : []
     
     const name = searchParam.get("name");
@@ -261,7 +261,7 @@ export default function ShoppingCart() {
         updatedCart.push({name, price, description, image, quantity: 1})
       }
 
-      localStorage.setItem("cart1", JSON.stringify(updatedCart))
+      localStorage.setItem("cart", JSON.stringify(updatedCart))
       setCartItem(updatedCart)
       router.replace("/cart1")
     }  
@@ -271,7 +271,7 @@ export default function ShoppingCart() {
     const removeCard = [...cartItem]
     removeCard.splice(index, 1)
 
-    localStorage.setItem("cart1", JSON.stringify(removeCard))
+    localStorage.setItem("cart", JSON.stringify(removeCard))
     setCartItem(removeCard)
   }
 
@@ -279,7 +279,7 @@ export default function ShoppingCart() {
     const copyWalaArray = [...cartItem]
     copyWalaArray[index].quantity = e_target_value
 
-    localStorage.setItem("cart1", JSON.stringify(copyWalaArray))
+    localStorage.setItem("cart", JSON.stringify(copyWalaArray))
     setCartItem(copyWalaArray)
   }
 
@@ -315,7 +315,7 @@ export default function ShoppingCart() {
                       <div className="w-24 h-24 bg-gray-100 rounded-md">
                         <Image
                           src={item.image}
-                          alt="Nike Dri-FIT"
+                          alt="sofa comforts available"
                           width={96}
                           height={96}
                           className="w-full h-full object-cover"
