@@ -553,7 +553,7 @@ function Header() {
 
           {/* Icons */}
           <div className="flex gap-4">
-           <Link href="/cart1"><ShoppingCart className="w-4 h-4 text-[#2A254B]" /></Link> 
+           <Link href="/cart"><ShoppingCart className="w-4 h-4 text-[#2A254B]" /></Link> 
            <Link href="/login"> <User className="w-4 h-4 text-[#2A254B]" /></Link>
            <Link href="/checkout"> <IoBagCheckOutline className="w-4 h-4 text-[#2A254B]"/></Link>
 

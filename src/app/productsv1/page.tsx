@@ -381,9 +381,9 @@ import { CircleUserRound, Search, ShoppingCart } from 'lucide-react';
 
 export default function Productv1() {
   const products = [
-    { title: 'The Dandy chair', price: 250, img: '/rightmain.png' },
-    { title: 'Rustic Vase Set', price: 250, img: '/milk.png' },
-    { title: 'The Silky Vase', price: 250, img: '/3rdcard.png' },
+    { title: 'The Dandy chair', price:  '£250', img: '/rightmain.png' },
+    { title: 'Rustic Vase Set', price:  '£250', img: '/milk.png' },
+    { title: 'The Silky Vase', price:  '£250', img: '/3rdcard.png' },
     { title: 'The Silky Vase', price: '£250', img: '/second.png' },
    { title: 'The Silky Vase', price: '£250', img: '/light.png' },
     { title: 'The Silky Vase', price: '£250', img: '/chairlast.png' },
@@ -405,7 +405,7 @@ export default function Productv1() {
                <Link href="/">Avion</Link>
              </h1>
             <div className="relative w-8 h-8">
-               <Link href="/cart1"><ShoppingCart className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" /></Link>
+               <Link href="/cart"><ShoppingCart className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" /></Link>
              </div>
              <div className="relative w-8 h-8">
              <Link href="/login"><CircleUserRound className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" /></Link>
@@ -421,7 +421,7 @@ export default function Productv1() {
     {name:"Tables",link:"/productlisting"},
     {name:"Chairs",link:"/productsv1"},
     {name:"Crockery",link:"/productpage"},
-    {name:"Tableware",link:"/cart1"},
+    {name:"Tableware",link:"/cart"},
     {name:"Cutlery",link:"/"},].map((item) => (
             <Link
               key={item.name}
@@ -488,7 +488,7 @@ export default function Productv1() {
       {/* Product Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         {products.map((product, index) => (
-          <Link
+          <Link 
             key={index}
             href={{
               pathname: `/productsv1/${product.title.toLowerCase().replace(/\s/g, '-')}`,
@@ -497,6 +497,9 @@ export default function Productv1() {
                 description: `Description for ${product.title}`,
                 price: product.price,
                 image: product.img,
+                
+
+                
               },
             }}
           >

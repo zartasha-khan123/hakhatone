@@ -263,7 +263,7 @@ export default function ShoppingCart() {
 
       localStorage.setItem("cart", JSON.stringify(updatedCart))
       setCartItem(updatedCart)
-      router.replace("/cart1")
+      router.replace("/cart")
     }  
   },[searchParam, router])
 

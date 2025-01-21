@@ -131,7 +131,7 @@ interface ProductCardDetailsProps {
 }
 
 export default function ProductCardDetails({
-  searchParams,
+  searchParams
 }: ProductCardDetailsProps) {
   const { name, description, price, image,_id } = searchParams;
 
@@ -176,8 +176,8 @@ export default function ProductCardDetails({
               <p className="text-3xl font-medium">£{price || fallbackPrice}</p>
               <Link
                 href={{
-                  pathname: "/cart1" ,
-                  query: { name, price, image, description },
+                  pathname: `/cart` ,
+                  query: { name, price, image, description, _id },
                 }}
               >
                 <Button className="h-12 rounded-full px-8">
