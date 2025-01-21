@@ -445,6 +445,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState, Suspense } from "react";
 
+
 interface Iproduct {
   name: string;
   price: string;
@@ -457,6 +458,12 @@ function ShoppingCartContent() {
   const router = useRouter();
   const searchParam = useSearchParams();
   const [cartItem, setCartItem] = useState<Iproduct[]>([]);
+
+  useEffect(() => {
+    const cart = localStorage.getItem("cart");
+    const updatedCart = cart ? JSON.parse(cart) : [];
+    setCartItem(updatedCart);
+  }, []);
 
   useEffect(() => {
     const cart = localStorage.getItem("cart");
@@ -496,6 +503,14 @@ function ShoppingCartContent() {
 
     localStorage.setItem("cart", JSON.stringify(copyWalaArray));
     setCartItem(copyWalaArray);
+  }
+
+  function handleWishList (index:number){
+    const wishListArray = [...cartItem]
+    const local_WishList = localStorage.getItem("wishlist")
+    const updatedWishList = local_WishList ? JSON.parse(local_WishList) : []
+    updatedWishList.push(wishListArray[index])
+    localStorage.setItem("wishlist", JSON.stringify(updatedWishList))
   }
 
   return (
@@ -565,7 +580,7 @@ function ShoppingCartContent() {
                           </p>
                         </div>
                         <div className="flex gap-4 mt-4">
-                          <Button variant="ghost" size="sm">
+                          <Button variant="ghost" size="sm" onClick={()=>{handleWishList(index)}}>
                             <Heart className="w-4 h-4" />
                           </Button>
                           <Button

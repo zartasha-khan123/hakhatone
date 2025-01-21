@@ -378,18 +378,19 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import Footer from '@/components/footer';
 import { CircleUserRound, Search, ShoppingCart } from 'lucide-react';
+import { Description } from '@radix-ui/react-alert-dialog';
 
 export default function Productv1() {
   const products = [
-    { title: 'The Dandy chair', price:  '£250', img: '/rightmain.png' },
-    { title: 'Rustic Vase Set', price:  '£250', img: '/milk.png' },
-    { title: 'The Silky Vase', price:  '£250', img: '/3rdcard.png' },
-    { title: 'The Silky Vase', price: '£250', img: '/second.png' },
-   { title: 'The Silky Vase', price: '£250', img: '/light.png' },
-    { title: 'The Silky Vase', price: '£250', img: '/chairlast.png' },
-     { title: 'The Silky Vase', price: '£250', img: '/7card.png' },
-     { title: 'The Silky Vase', price: '£250', img: '/8card.png' },
-      { title: 'The Silky Vase', price: '£250', img: '/9card.png' },
+    { title: 'The Dandy chair', price:  '£250', img: '/rightmain.png', description:" A sleek, stylish, and modern seating solution blending comfort with elegance."},
+    { title: 'Rustic Vase Set', price:  '£250', img: '/milk.png',description:" A charming collection of earthy, handcrafted vases perfect for adding a touch of natural elegance to any space." },
+    { title: 'The Silky Vase', price:  '£250', img: '/3rdcard.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
+    { title: 'The Silky Vase', price: '£250', img: '/second.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
+   { title: 'The Silky Vase', price: '£250', img: '/light.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
+    { title: 'The Silky Vase', price: '£250', img: '/chairlast.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
+     { title: 'The Silky Vase', price: '£250', img: '/7card.png',description:" A sleek, stylish, and modern seating solution blending comfort with elegance." },
+     { title: 'The Silky Vase', price: '£250', img: '/8card.png',description:" A charming collection of earthy, handcrafted vases perfect for adding a touch of natural elegance to any space."  },
+      { title: 'The Silky Vase', price: '£250', img: '/9card.png',description:" A charming collection of earthy, handcrafted vases perfect for adding a touch of natural elegance to any space."  },
     
   ];
 
@@ -494,7 +495,7 @@ export default function Productv1() {
               pathname: `/productsv1/${product.title.toLowerCase().replace(/\s/g, '-')}`,
               query: {
                 name: product.title,
-                description: `Description for ${product.title}`,
+                description: `Description for ${product.title} ${product.description}`,
                 price: product.price,
                 image: product.img,
                 
@@ -512,7 +513,7 @@ export default function Productv1() {
                 className="w-full h-[375px] object-cover rounded-md"
               />
               <h4 className="font-bold mt-4">{product.title}</h4>
-              <p className="text-gray-600">£{product.price}</p>
+              <p className="text-gray-600">{product.price}</p>
             </div>
           </Link>
         ))}

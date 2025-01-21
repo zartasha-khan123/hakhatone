@@ -173,7 +173,7 @@ export default function ProductCardDetails({
               {description || fallbackDescription}
             </p>
             <div className="space-y-4">
-              <p className="text-3xl font-medium">£{price || fallbackPrice}</p>
+              <p className="text-3xl font-medium">{price || fallbackPrice}</p>
               <Link
                 href={{
                   pathname: `/cart` ,
