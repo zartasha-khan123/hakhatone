@@ -3,7 +3,6 @@ import Features from "@/components/features";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-// import { MainNav } from "@/components/mainnav";
 import Newsletter from "@/components/newsletter";
 import Popularproduct from "@/components/popularproduct";
 import Product from "@/components/product";
