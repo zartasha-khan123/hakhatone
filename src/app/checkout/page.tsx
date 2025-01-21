@@ -214,7 +214,7 @@
 //   )
 // }
 
-//src\app\checkout\page.tsx
+// src\app\checkout\page.tsx
 "use client";
 import * as React from "react";
 import { Card } from "@/components/ui/card";
@@ -376,7 +376,7 @@ export default function CheckoutForm() {
               })}
 
               <Button className="w-full rounded-full py-6 bg-yellow-800" onClick={handlePayment}>
-                Lets Pay
+                Lets Pay the order
               </Button>
             </div>
           </div>
@@ -385,3 +385,5 @@ export default function CheckoutForm() {
     </div>
   );
 }
+
+

@@ -421,7 +421,7 @@ export default function Productv1() {
     {name:"Tables",link:"/productlisting"},
     {name:"Chairs",link:"/productsv1"},
     {name:"Crockery",link:"/productpage"},
-    {name:"Tableware",link:"/cart"},
+    {name:"Tableware",link:"/cart1"},
     {name:"Cutlery",link:"/"},].map((item) => (
             <Link
               key={item.name}

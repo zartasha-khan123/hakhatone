@@ -3,9 +3,10 @@ import  { Landing } from './landingpage'
 import  { Hero } from './landingpagesections/hero'
 import  { Products } from './landingpagesections/productsection'
 import { Popular } from './landingpagesections/popularproducts'
+import { Comment } from './comments'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-   types: [Landing,Hero,Products,Popular],
+   types: [Landing,Hero,Products,Popular,Comment],
 }
 
 

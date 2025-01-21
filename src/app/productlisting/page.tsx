@@ -790,11 +790,12 @@ function Productlisting() {
                   </button>
                 </div>
               </div>
+              <Link href="/cart1">
               <Button
                 className="bg-[#2A254B] hover:bg-[#2A254B]/90 text-white px-8 py-4 h-auto"
               >
                 Add to cart
-              </Button>
+              </Button></Link>
             </Card>
           </div>
         </div>

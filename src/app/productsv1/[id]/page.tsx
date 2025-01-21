@@ -112,10 +112,13 @@
 
 "use client";
 
+import PostCreator from "@/components/reviews";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { _isSanityDocumentTypeDefinition } from "sanity";
 
 interface ProductCardDetailsProps {
   searchParams: {
@@ -123,21 +126,30 @@ interface ProductCardDetailsProps {
     description?: string;
     price?: string;
     image?: string;
+    _id?:string
   };
 }
 
 export default function ProductCardDetails({
   searchParams,
 }: ProductCardDetailsProps) {
-  const { name, description, price, image } = searchParams;
+  const { name, description, price, image,_id } = searchParams;
+
+  const [blogId, setBlogId] = useState<string>("");
+
+  useEffect(() => {
+    // Fetch or set the _id dynamically
+    setBlogId("dynamic_id_from_server_or_logic");
+  }, [])
 
   // Default fallback values (if any property is missing)
   const fallbackName = "Product Name";
   const fallbackDescription = "No description available.";
   const fallbackPrice = "0.00";
-  const fallbackImage = "/placeholder-image.png"; // Replace with a valid placeholder image path
+  const fallbackImage = "/rightmain.png"; // Replace with a valid placeholder image path
 
   return (
+    <>
     <div className="min-h-screen bg-white p-6 mt-[100px]">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
@@ -164,7 +176,7 @@ export default function ProductCardDetails({
               <p className="text-3xl font-medium">£{price || fallbackPrice}</p>
               <Link
                 href={{
-                  pathname: "/cart1",
+                  pathname: "/cart1" ,
                   query: { name, price, image, description },
                 }}
               >
@@ -178,5 +190,10 @@ export default function ProductCardDetails({
         </div>
       </div>
     </div>
+    <hr/>
+    <h2 className="text-2xl font-bold mt-12 mb-4">comments</h2>
+    <PostCreator blog_id={_id || "default_id"} />
+
+    </>
   );
 }
