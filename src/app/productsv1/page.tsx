@@ -377,7 +377,7 @@ import Image from 'next/image';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import Footer from '@/components/footer';
-import { CircleUserRound, Search, ShoppingCart } from 'lucide-react';
+import { CircleUserRound, Heart, Search, ShoppingCart } from 'lucide-react';
 import { Description } from '@radix-ui/react-alert-dialog';
 
 export default function Productv1() {
@@ -410,6 +410,9 @@ export default function Productv1() {
              </div>
              <div className="relative w-8 h-8">
              <Link href="/login"><CircleUserRound className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" /></Link>
+             </div>
+             <div className="relative w-8 h-8">
+             <Link href="/wishlist"><Heart className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" /></Link>
              </div>
            </div>
          </div>

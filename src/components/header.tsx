@@ -522,7 +522,7 @@
 
 
 'use client'
-import { Search, User } from 'lucide-react';
+import { Search, User,  Heart } from 'lucide-react';
 import Link from 'next/link';
 import { ShoppingCart } from 'lucide-react';
 import { CircleUserRound } from 'lucide-react';
@@ -556,6 +556,7 @@ function Header() {
            <Link href="/cart"><ShoppingCart className="w-4 h-4 text-[#2A254B]" /></Link> 
            <Link href="/login"> <User className="w-4 h-4 text-[#2A254B]" /></Link>
            <Link href="/checkout"> <IoBagCheckOutline className="w-4 h-4 text-[#2A254B]"/></Link>
+           <Link href="/wishlist"><Heart className="w-4 h-4" /></Link>
 
           </div>
         </div>
