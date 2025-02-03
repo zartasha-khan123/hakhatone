@@ -4,10 +4,14 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import ContactSection from '@/components/contactsection'
+import Header from '@/components/header'
+import Link from 'next/link'
 
 
 export default function HelpPage() {
   return (
+    <>
+    <Header />
     <div className="min-h-screen bg-white mt-[99px]">
       {/* Header */}
       <header className="py-8 px-4">
@@ -41,8 +45,8 @@ export default function HelpPage() {
               <div className="my-8">
                 <p className="mb-4 font-medium">Avion Members can store multiple debit or credit cards in their profile for faster checkout. If you&apos;re not already a Member, join us today.</p>
                 <div className="flex gap-4">
-                  <Button className="rounded-full">JOIN US</Button>
-                  <Button className="rounded-full">SHOP AVION</Button>
+                 <Link href='/joinus'> <Button className="rounded-full">JOIN US</Button></Link>
+                 <Link href='/productdisplay'>  <Button className="rounded-full">SHOP AVION</Button></Link>
                 </div>
               </div>
 
@@ -76,7 +80,7 @@ export default function HelpPage() {
           <div>
             <Card className="sticky top-4">
               <CardContent className="p-6">
-                <h2 className="text-2xl font-medium text-center mb-8">CONTACT US</h2>
+              <Link href='/contactus'><h2 className="text-2xl font-medium text-center mb-8">CONTACT US</h2></Link>
                 <ContactSection />
               </CardContent>
             </Card>
@@ -84,5 +88,6 @@ export default function HelpPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

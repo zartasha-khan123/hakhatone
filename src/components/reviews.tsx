@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { X } from 'lucide-react'
 import { toast } from 'sonner'
-import { createComment, deleteComment, myFetch, updateComment } from '@/app/services/create'
+import { createComment, deleteComment, myFetch, updateComment } from '@/services/create'
 import ReviewCard from './reviewscards'
 
 export interface Comment { _id: string,  name: string; email: string; message: string, paramsId: number}

@@ -40,7 +40,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="text-sm">About us</li>
               <li className="text-sm">Vacancies</li>
-              <li className="text-sm">Contact us</li>
+              <Link href="/contactus"><li className="text-sm">Contact us</li></Link>
               <li className="text-sm">Privacy</li>
               <li className="text-sm">Returns policy</li>
             </ul>
@@ -68,11 +68,11 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-[#4E4D93] flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm">Copyright 2022 Avion LTD</p>
           <div className="flex gap-6">
-           <Link href='/'> <Linkedin size={20}  /></Link>
-           <Link href='/'> <Facebook  size={20} /></Link>
-           <Link href='/'>  <Instagram size={20}/></Link>
-            <Link href='/'><Skype size={20} /></Link>
-           <Link href='/' > <Twitter size={20} /></Link>
+           <Link href='https://www.linkedin.com/'> <Linkedin size={20}  /></Link>
+           <Link href='https://www.facebook.com/'> <Facebook  size={20} /></Link>
+           <Link href='https://www.instagram.com/'>  <Instagram size={20}/></Link>
+            <Link href='https://www.skype.com/'><Skype size={20} /></Link>
+           <Link href='https://www.twitter.com/' > <Twitter size={20} /></Link>
             <Link href='/'><Pinterest size={20} /></Link>
           </div>
         </div>

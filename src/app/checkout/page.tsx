@@ -214,7 +214,7 @@
 //   )
 // }
 
-// src\app\checkout\page.tsx
+//src\app\checkout\page.tsx
 "use client";
 import * as React from "react";
 import { Card } from "@/components/ui/card";
@@ -231,17 +231,20 @@ import {
 } from "@/components/ui/select";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Header from "@/components/header";
 
 interface ICart {
   name: string;
   image: string;
   price: number;
   quantity: number;
+  imageUrl: string;
 }
 
 export default function CheckoutForm() {
   const [cartItem, setCartItem] = useState<ICart[]>([]);
   const [shipCost, setShipCost] = useState(0);
+
 
   useEffect(() => {
     const data = localStorage.getItem("cart");
@@ -256,12 +259,12 @@ export default function CheckoutForm() {
     setShipCost(Number(shipCost)); // ensure it's a number
   }, []);
 
-  function handlePayment() {
-    alert("payment successfull ✅");
+  // function handlePayment() {
+  //   alert("payment successfull ✅");
 
-    localStorage.setItem("cart", JSON.stringify([]));
-    setCartItem([]);
-  }
+  //   localStorage.setItem("cart", JSON.stringify([]));
+  //   setCartItem([]);
+  // }
 
   const totalAmount =
     cartItem.reduce(
@@ -269,7 +272,57 @@ export default function CheckoutForm() {
       0
     ) + shipCost;
 
+
+//      async function handleCheckout(product: ICart[]) {
+
+//     const response = await fetch('/api/payment', {
+
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({product})
+        
+      
+// })
+
+//  const data = await response.json();
+//  window.location.href=data.url
+//     console.log(data)
+
+
+//   }
+
+async function handleCheckout(products: ICart[]) {
+    try {
+      const response = await fetch('/api/payment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ products }), // Make sure product is an array
+      });
+  
+      const data = await response.json();
+  
+      // Debug the response
+      console.log('Stripe session data:', data);
+  
+      if (data.url) {
+        // Redirect the user to the Stripe checkout session
+        window.location.href = data.url;
+      } else {
+        console.error('No URL returned from Stripe session:', data);
+      }
+    } catch (error) {
+      console.error('Error during checkout:', error);
+    }
+  }
+
+
   return (
+    <>
+    <Header/>
     <div className="min-h-screen bg-gray-50 p-4 md:p-6 mt-[99px]">
       <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
         {/* Left Column - Form */}
@@ -349,7 +402,7 @@ export default function CheckoutForm() {
             </div>
             <div className="flex justify-between text-sm text-gray-600">
               <span>Delivery/Shipping</span>
-              <span>{shipCost ? "₹ " + shipCost : "Free"}</span>
+              <span>{shipCost ? "$ " + shipCost : "Free"}</span>
             </div>
             <div className="border-t pt-4">
               <div className="flex justify-between font-medium">
@@ -365,25 +418,30 @@ export default function CheckoutForm() {
               {cartItem.map((item: ICart, index: number) => {
                 return (
                   <div className="flex gap-4 relative" key={index}>
-                    <Image src={item.image} alt="image" width={80} height={80} />
+                    <Image src={item.image || item.imageUrl} alt="image" width={80} height={80} />
                     <div className="w-full space-y-1">
                       <p className="text-sm">{item.name}</p>
                       <p className="text-sm text-gray-500">Qty {item.quantity}</p>
-                      <p className="text-sm text-gray-500">₹ {item.price * item.quantity}</p>
+                      <p className="text-sm text-gray-500">$ {item.price * item.quantity}</p>
                     </div>
                   </div>
                 );
               })}
 
-              <Button className="w-full rounded-full py-6 bg-yellow-800" onClick={handlePayment}>
-                Lets Pay the order
-              </Button>
+              <Button className="w-full rounded-full py-6 bg-yellow-800" onClick={()=>handleCheckout(cartItem)} 
+              >
+              Pay Now    
+              
+                        </Button>
             </div>
           </div>
         </Card>
       </div>
     </div>
+    </>
   );
+
 }
+
 
 

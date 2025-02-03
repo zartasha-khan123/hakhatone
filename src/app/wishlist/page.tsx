@@ -5,12 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Header from "@/components/header";
 
 interface IWishlistItem {
+  [x: string]: string;
   name: string;
   price: string;
   description: string;
   image: string;
+  imageUrl: string;
 }
 
 export default function Wishlist() {
@@ -41,6 +44,8 @@ export default function Wishlist() {
   }
 
   return (
+    <>
+    <Header/>
     <div className="container mx-auto px-4 py-8 mt-[99px]">
       <h1 className="text-2xl font-medium mb-6">My Wishlist</h1>
 
@@ -54,7 +59,7 @@ export default function Wishlist() {
                   <div className="flex gap-6">
                     <div className="w-24 h-24 bg-gray-100 rounded-md">
                       <Image
-                        src={item.image || "/placeholder.svg"}
+                        src={item.image || item.imageUrl}
                         alt={item.name}
                         width={96}
                         height={96}
@@ -144,5 +149,6 @@ export default function Wishlist() {
         </div>
       </div>
     </div>
+    </>
   );
 }

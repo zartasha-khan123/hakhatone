@@ -382,15 +382,15 @@ import { Description } from '@radix-ui/react-alert-dialog';
 
 export default function Productv1() {
   const products = [
-    { title: 'The Dandy chair', price:  '£250', img: '/rightmain.png', description:" A sleek, stylish, and modern seating solution blending comfort with elegance."},
-    { title: 'Rustic Vase Set', price:  '£250', img: '/milk.png',description:" A charming collection of earthy, handcrafted vases perfect for adding a touch of natural elegance to any space." },
-    { title: 'The Silky Vase', price:  '£250', img: '/3rdcard.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
-    { title: 'The Silky Vase', price: '£250', img: '/second.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
-   { title: 'The Silky Vase', price: '£250', img: '/light.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
-    { title: 'The Silky Vase', price: '£250', img: '/chairlast.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
-     { title: 'The Silky Vase', price: '£250', img: '/7card.png',description:" A sleek, stylish, and modern seating solution blending comfort with elegance." },
-     { title: 'The Silky Vase', price: '£250', img: '/8card.png',description:" A charming collection of earthy, handcrafted vases perfect for adding a touch of natural elegance to any space."  },
-      { title: 'The Silky Vase', price: '£250', img: '/9card.png',description:" A charming collection of earthy, handcrafted vases perfect for adding a touch of natural elegance to any space."  },
+    { title: 'The Dandy chair', price:  250, img: '/rightmain.png', description:" A sleek, stylish, and modern seating solution blending comfort with elegance."},
+    { title: 'Rustic Vase Set', price:  250, img: '/milk.png',description:" A charming collection of earthy, handcrafted vases perfect for adding a touch of natural elegance to any space." },
+    { title: 'The Silky Vase', price:  250, img: '/3rdcard.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
+    { title: 'The Silky Vase', price: 250, img: '/second.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
+   { title: 'The Silky Vase', price: 250, img: '/light.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
+    { title: 'The Silky Vase', price: 250, img: '/chairlast.png',description:"A sleek and elegant vase with a smooth finish, perfect for showcasing flowers or as a standalone statement piece" },
+     { title: 'The Silky Vase', price: 250, img: '/7card.png',description:" A sleek, stylish, and modern seating solution blending comfort with elegance." },
+     { title: 'The Silky Vase', price: 250, img: '/8card.png',description:" A charming collection of earthy, handcrafted vases perfect for adding a touch of natural elegance to any space."  },
+      { title: 'The Silky Vase', price: 250, img: '/9card.png',description:" A charming collection of earthy, handcrafted vases perfect for adding a touch of natural elegance to any space."  },
     
   ];
 
@@ -426,7 +426,7 @@ export default function Productv1() {
     {name:"Chairs",link:"/productsv1"},
     {name:"Crockery",link:"/productpage"},
     {name:"Tableware",link:"/cart"},
-    {name:"Cutlery",link:"/"},].map((item) => (
+    {name:"Cutlery",link:"/productdisplay"},].map((item) => (
             <Link
               key={item.name}
               href={item.link}
@@ -516,7 +516,7 @@ export default function Productv1() {
                 className="w-full h-[375px] object-cover rounded-md"
               />
               <h4 className="font-bold mt-4">{product.title}</h4>
-              <p className="text-gray-600">{product.price}</p>
+              <p className="text-gray-600">${product.price}</p>
             </div>
           </Link>
         ))}
@@ -524,9 +524,9 @@ export default function Productv1() {
       </div>
 
       <div className="text-center mt-8 mb-12">
-        <button className="bg-gray-500 hover:bg-gray-300 text-black py-3 px-8 sm:py-4 sm:px-12 text-sm sm:text-base rounded shadow-md transition-colors">
+       <Link href="/productdisplay"> <button className="bg-gray-500 hover:bg-gray-300 text-black py-3 px-8 sm:py-4 sm:px-12 text-sm sm:text-base rounded shadow-md transition-colors">
            Load More
-        </button>
+        </button></Link>
        </div>
        
 

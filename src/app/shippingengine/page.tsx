@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Truck, User, Phone, Home, Building, MapPin, Package, Weight, Ruler } from 'lucide-react'
 import  JsonResponseViewer from '@/components/jsonresponse'
-import { postRequest } from '@/app/services/shipmentapi'
+import { postRequest } from '@/services/shipmentapi'
 
 export default function ShipmentForm() {
   // Shipment state
